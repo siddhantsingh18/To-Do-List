@@ -1,3 +1,4 @@
+
 body {
   font-family: sans-serif;
   background: #0fc;
@@ -15,22 +16,25 @@ body {
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 200px;
+  min-height: 200px;
 }
 
 .input-section {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   margin-bottom: 15px;
 }
 
-input {
-  flex: 1;
-  padding: 8px;
+input,
+button {
+  width: 100%; 
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 button {
-  padding: 8px;
   background: green;
   color: white;
   border: none;
@@ -62,11 +66,13 @@ li {
   padding: 4px 6px;
   cursor: pointer;
 }
-.toggle-darkmode label{
-    display: inline-flex;
-    gap: 5px;
-    align-items: center;
-    margin-bottom: 10px;
+
+.toggle-darkmode label {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 body.dark-mode {
@@ -81,22 +87,9 @@ body.dark-mode li {
   background: #333;
   color: white;
 }
+
 @media (max-width: 480px) {
   .container {
     padding: 15px;
   }
-
-  .input-section {
-    flex-direction: column;
-  }
-
-  input, button {
-    width: 100%;
-  }
-
-  button {
-    margin-top: 5px;
-  }
 }
-
-

@@ -1,0 +1,102 @@
+body {
+  font-family: sans-serif;
+  background: #0fc;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 200px;
+}
+
+.input-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  padding: 8px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 8px;
+  background: white;
+  border-radius: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+.toggle-darkmode label{
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+body.dark-mode {
+  background: black;
+  color: white;
+}
+body.dark-mode .container {
+  background: black;
+}
+body.dark-mode input,
+body.dark-mode li {
+  background: #333;
+  color: white;
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 5px;
+  }
+}
+
+

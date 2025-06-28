@@ -63,8 +63,11 @@ li {
   background: red;
   color: white;
   border: none;
-  padding: 4px 6px;
+  padding: 2px 8px;
   cursor: pointer;
+  border-radius: 5px;
+  width: fit-content;
+  height: auto;
 }
 
 .toggle-darkmode label {
@@ -91,5 +94,8 @@ body.dark-mode li {
 @media (max-width: 480px) {
   .container {
     padding: 15px;
+    .deleteBtn{
+      padding: 1px 3px;
+    }
   }
 }
